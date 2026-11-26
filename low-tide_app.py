@@ -7,14 +7,18 @@ app.secret_key = "change-me-to-anything"
 def shop():
     return render_template("index.html")
 
-@app.route("/book")
-def flask():
-    rooms = ["Room1", "Room2", "Room3"]
-    return render_template("flask.html", rooms=rooms)
-
 @app.route("/about")
-def bread():
-    return "About us"
+def about():
+    return render_template("about.html")
+
+@app.route("/account")
+def account():
+    return render_template("account.html")
+
+@app.route("/booking")
+def booking():
+    rooms = ["Room1", "Room2", "Room3"]
+    return render_template("booking.html", rooms=rooms)
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=True)

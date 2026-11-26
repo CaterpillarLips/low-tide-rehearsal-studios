@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings - Low-tide Rehearsal Studio</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+</head>
+<body>
+  {% include "header.html" %}
+
+  <main class="container py-5">
+    <h1>Bookings</h1>
+    {% for room in rooms %}
+      <p>{{ room }}</p>
+    {% endfor %}
+  </main>
+
+  <script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+</body>
+</html>
